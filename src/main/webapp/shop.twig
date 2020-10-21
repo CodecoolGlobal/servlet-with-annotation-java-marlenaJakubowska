@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/normalize.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/skeleton.css">
+
+    <title>Book Shop</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Book Shop</h1>
+        <div class="stock">
+            <
+                {% for item in stock %}
+                     <div class="item">
+                         <div> {{ item.name }} {{ item.price }}
+                            <form method="post" action="shop"><input type="hidden" name="id" value={{ item.id }}/><button type="submit">Add to cart</button>
+                    </form>
+                 </div>
+            </div>
+                {% endfor %}
+
+        </div>
+    <a href="/cart">Cart</a>
+    </div>
+</body>
+</html>

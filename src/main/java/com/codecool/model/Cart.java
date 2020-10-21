@@ -18,15 +18,11 @@ public class Cart {
         return items;
     }
 
-    public void setItems(List<Item> items) {
-        this.items = items;
-    }
-
-    public void add(Item item) {
+    public void addItem(Item item) {
         items.add(item);
     }
 
-    public void remove(Item item) {
+    public void removeItem(Item item) {
         items.remove(item);
     }
 }
